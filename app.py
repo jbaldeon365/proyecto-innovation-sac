@@ -104,7 +104,7 @@ def crear_embedding(texto):
     """Genera embeddings usando Cohere (modelo multilenguaje)."""
     resp = co.embed(
         model="embed-multilingual-v3.0",
-        texts=[texto]
+        texts=[texto],
         input_type=tipo
     )
     return resp.embeddings[0]
