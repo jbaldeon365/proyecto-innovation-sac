@@ -103,7 +103,7 @@ def leer_pdf(archivo):
 def crear_embedding(texto):
     """Genera embeddings usando Cohere (modelo multilenguaje)."""
     resp = co.embed(
-        model="multilingual-22-12",
+        model="embed-multilingual-v3.0"
         texts=[texto]
     )
     return resp.embeddings[0]
