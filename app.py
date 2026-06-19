@@ -100,7 +100,7 @@ def leer_pdf(archivo):
         texto += page.extract_text() + "\n"
     return texto.strip()
 
-def crear_embedding(texto):
+def crear_embedding(texto, tipo="search_query"):
     """Genera embeddings usando Cohere (modelo multilenguaje)."""
     resp = co.embed(
         model="embed-multilingual-v3.0",
