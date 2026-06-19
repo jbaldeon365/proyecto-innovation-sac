@@ -105,6 +105,7 @@ def crear_embedding(texto):
     resp = co.embed(
         model="embed-multilingual-v3.0",
         texts=[texto]
+        input_type=tipo
     )
     return resp.embeddings[0]
 
